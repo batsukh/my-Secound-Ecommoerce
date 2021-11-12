@@ -19,21 +19,26 @@ const Header = ({ currentUser, hidden }) => (
     </Link>
 
     <div className="options">
-      <Link className="option" to="/ОНЦЛОХ ЗАР">
+      <Link className="option" to="/list?category=featured">
         ОНЦЛОХ ЗАР
       </Link>
-      БҮХ ЗАР
-      <Link className="БҮХ ЗАР " to="/shop"></Link>
-      АЖИЛЫН ЗАР
-      <Link className="АЖИЛЫН ЗАР " to="/shop"></Link>
-      БАЙР ТҮРЭЭС
-      <Link className="БАЙР ТҮРЭЭС " to="/shop"></Link>
-      БУСАД ЗАР
-      <Link className="БУСАД ЗАР " to="/shop"></Link>
-      ИНТЭРНЭТ ХУДАЛДАА
-      <Link className="ИНТЭРНЭТ ХУДАЛДАА " to="/shop"></Link>
+      <Link className="option" to="/list?category=all">
+        БҮХ ЗАР
+      </Link>
+      <Link className="option" to="/list?category=job">
+        АЖЛЫН ЗАР
+      </Link>
+      <Link className="option" to="/list?category=rent">
+        БАЙР ТҮРЭЭС
+      </Link>
+      <Link className="option" to="/list?category=other">
+        БУСАД ЗАР
+      </Link>
+      <Link className="option" to="/shop">
+        ИНТЭРНЭТ ХУДАЛДАА
+      </Link>
       <Link className="option" to="/contact-us">
-        ХОЛБОО БАРИХ САНАЛ
+        ХОЛБОО БАРИХ
       </Link>
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>

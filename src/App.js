@@ -1,12 +1,13 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import HomePage from "./pages/homepage/homepage.component";
-import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
-
-import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import ContactUs from "./pages/contact-us/contact-us.component";
+import HomePage from "./pages/homepage/homepage.component";
+import ListPage from "./pages/list/list.component";
+import ShopPage from "./pages/shop/shop.component";
+import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
+
 import Header from "./components/header/header.component";
 
 import { createStructuredSelector } from "reselect";
@@ -50,6 +51,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/list" component={ListPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route exact path="/contact-us" component={ContactUs} />
           <Route
