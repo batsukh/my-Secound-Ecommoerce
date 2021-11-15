@@ -1,10 +1,10 @@
 import React from "react";
-import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
+import ListItems from "../../components/list-items/list.items.component";
 
-const List = ({ collections }) => (
+const List = () => (
   <div className="list">
     fjkl
-    <CollectionsOverview />
+    <ListItems />
   </div>
 );
 
