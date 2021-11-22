@@ -1,3 +1,9 @@
-.row {
-  display: flex; /* aligns all child elements (flex items) in a row */
+tr {
+  display: flex;
+  border: 1px solid red;
+}
+
+td {
+  display: flex;
+  border: 1px solid blue;
 }

@@ -7,13 +7,21 @@ import ListItem from "../list-item/list-item.component";
 import "./list.items.styles.scss";
 
 const ListItems = () => (
-  <ul className="list-items">
-    {items.map(({ id, title, image }) => (
-      <li>
-        <ListItem key={id} id={id} title={title} image={image} />
-      </li>
+  <table className="table">
+    {items.map(({ id, title, image, description, phone, email }) => (
+      <tr>
+        <ListItem
+          key={id}
+          id={id}
+          title={title}
+          image={image}
+          description={description}
+          phone={phone}
+          email={email}
+        />
+      </tr>
     ))}
-  </ul>
+  </table>
 );
 
 export default ListItems;
