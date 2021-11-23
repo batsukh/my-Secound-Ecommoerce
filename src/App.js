@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import CheckoutPage from "./pages/checkout/checkout.component";
@@ -9,6 +9,7 @@ import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 
 import Header from "./components/header/header.component";
+import ListModal from "./components/modal/modal.component";
 
 import { createStructuredSelector } from "reselect";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
@@ -17,6 +18,8 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selector";
 import { pages } from "./pages/contact-us/contact-us.component";
 import "./App.css";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -62,6 +65,7 @@ class App extends React.Component {
             }
           />
         </Switch>
+        <ListModal />
       </div>
     );
   }
